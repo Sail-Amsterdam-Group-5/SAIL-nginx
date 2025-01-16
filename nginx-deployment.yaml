@@ -25,7 +25,10 @@ spec:
           - mountPath: /var/run/openresty
             name: run-openresty-dir
           - name: keycloak-public-key
-            mountPath: /etc/secrets
+            mountPath: /etc/secrets/keycloak
+            readOnly: true
+          - name: nginx-tls-secret
+            mountPath: /etc/secrets/tls
             readOnly: true
       volumes:
         - name: nginx-config-volume
@@ -36,3 +39,6 @@ spec:
         - name: keycloak-public-key
           secret:
             secretName: keycloak-public-key
+        - name: nginx-tls-secret
+          secret:
+            secretName: nginx-tls-secret
