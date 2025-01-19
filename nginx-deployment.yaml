@@ -22,6 +22,33 @@ spec:
           - mountPath: /etc/nginx/nginx.conf
             subPath: nginx.conf
             name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/roles.lua
+            subPath: roles.lua
+            name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/upstreams.conf
+            subPath: upstreams.conf
+            name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/locations/chat.conf
+            subPath: chat.conf
+            name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/locations/faq.conf
+            subPath: faq.conf
+            name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/locations/login.conf
+            subPath: login.conf
+            name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/locations/map.conf
+            subPath: map.conf
+            name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/locations/test.conf
+            subPath: test.conf
+            name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/locations/user.conf
+            subPath: user.conf
+            name: nginx-config-volume
+          - mountPath: /usr/local/openresty/lualib/resty/validate_jwt.lua
+            subPath: validate_jwt.lua
+            name: nginx-config-volume
           - mountPath: /var/run/openresty
             name: run-openresty-dir
           - name: keycloak-public-key
