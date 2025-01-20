@@ -44,6 +44,6 @@ role_rules = {
         ["POST /task/.+/cancel"] = {"volunteer"},
         ["GET /task/checkins"] = {"team-lead"},
         ["GET /task/checknins/.+/.+"] = {"volunteer"},
-        ["GET /task/"],
+        -- ["GET /task/"],
     }
 }
