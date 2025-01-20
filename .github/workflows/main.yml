@@ -98,6 +98,7 @@ jobs:
             --from-file=conf.d/locations/map.conf \
             --from-file=conf.d/locations/test.conf \
             --from-file=conf.d/locations/user.conf \
+            --from-file=conf.d/locations/schedule.conf \
             --from-file=conf.d/roles.lua \
             --from-file=conf.d/upstreams.conf \
             --from-file=validate_jwt.lua

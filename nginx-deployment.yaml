@@ -46,6 +46,9 @@ spec:
           - mountPath: /etc/nginx/conf.d/locations/user.conf
             subPath: user.conf
             name: nginx-config-volume
+          - mountPath: /etc/nginx/conf.d/locations/schedule.conf
+            subPath: schedule.conf
+            name: nginx-config-volume
           - mountPath: /usr/local/openresty/lualib/resty/validate_jwt.lua
             subPath: validate_jwt.lua
             name: nginx-config-volume

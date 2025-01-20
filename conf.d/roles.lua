@@ -30,5 +30,20 @@ role_rules = {
         ["GET /users"] = {"volunteer"},
         ["GET /users/.+"] = {"team-lead"},
         ["POST /register"] = {"volunteer"},
+    },
+
+    schedule = {
+        ["GET /"] = {"volunteer"},
+        ["GET /.+"] = {"volunteer"},
+        ["GET /group/.+"] = {"volunteer"},
+        ["POST /task"] = {"team-lead"},
+        ["GET /task/.+"] = {"volunteer"},
+        ["PUT /task/.+"] = {"team-lead"},
+        ["DELETE /task/.+"] = {"team-lead"},
+        ["POST /task/.+/checkin"] = {"volunteer"},
+        ["POST /task/.+/cancel"] = {"volunteer"},
+        ["GET /task/checkins"] = {"team-lead"},
+        ["GET /task/checknins/.+/.+"] = {"volunteer"},
+        ["GET /task/"]
     }
 }
