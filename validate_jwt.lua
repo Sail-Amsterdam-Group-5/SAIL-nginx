@@ -104,10 +104,10 @@ local function validate_jwt(service, role_rules)
     ngx.req.set_header("X-User-Function", user_function)
     ngx.req.set_header("X-User-NotificationPreference", notificationPreference)
     
-    --CORS
-    ngx.header("Access-Control-Allow-Origin: *")
-    ngx.header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS")
-    ngx.header("Access-control-Allow-Headers: Content-Type, Authorization")
+    -- CORS headers
+    ngx.header["Access-Control-Allow-Origin"] = "*"
+    ngx.header["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+    ngx.header["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
 
 
 end
