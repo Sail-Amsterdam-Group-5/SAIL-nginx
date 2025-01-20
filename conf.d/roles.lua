@@ -45,5 +45,25 @@ role_rules = {
         ["GET /task/checkins"] = {"team-lead"},
         ["GET /task/checknins/.+/.+"] = {"volunteer"},
         -- ["GET /task/"],
+    }, 
+
+    -- Chat endpoints
+    chat = {
+        ["GET /api/Chats/.+"] = {"volunteer"},
+        ["POST /api/Chats"] = {"volunteer"},
+        ["GET /api/Chats"] = {"volunteer"},
+        ["POST /api/Chats/.+/users/.+"] = {"volunteer"},
+        ["DELETE /api/Chats/.+/users/.+"] = {"volunteer"},
+        ["POST /api/Chats/.+/admin/.+"] = {"admin", "team-lead"},
+        ["DELETE /api/Chats/.+/admin/.+"] = {"admin", "team-lead"},
+        ["GET /api/Messages/.+"] = {"volunteer"},
+        ["GET /api/Messages/deleted"] = {"volunteer"},
+        ["POST /api/Messages"] = {"volunteer"},
+        ["DELETE /api/Messages/.+"] = {"volunteer"},
+        ["GET /api/Messages/metrics/system"] = {"volunteer"},
+        ["GET /api/Messages/.+/sync"] = {"volunteer"},
+        ["GET /api/Messages/.+/recent"] = {"volunteer"},
+        ["GET /api/Messages/.+/history"] = {"volunteer"},
+        ["GET /swagger/index.html"] = {"volunteer"},
     }
 }
