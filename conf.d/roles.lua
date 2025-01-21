@@ -30,6 +30,7 @@ role_rules = {
         ["GET /users"] = {"volunteer"},
         ["GET /users/.+"] = {"team-lead"},
         ["POST /register"] = {"volunteer"},
+        ["GET /swagger"] = {"volunteer"},
     },
 
     schedule = {
