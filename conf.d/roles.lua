@@ -29,8 +29,7 @@ role_rules = {
     user = {
         ["GET /users"] = {"volunteer"},
         ["GET /users/.+"] = {"team-lead"},
-        ["POST /register"] = {"volunteer"},
-        ["GET /swagger"] = {"volunteer"},
+        ["GET /swagger/index.html"] = {"volunteer"},
     },
 
     schedule = {
